@@ -11,7 +11,7 @@ decorator
 deta
 extra-streamlit-components
 gitdb
-GitPython1==22.0.3
+GitPython1==23.3.2
 idna
 importlib-metadata
 Jinja2
