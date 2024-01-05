@@ -27,6 +27,26 @@ hide_st_style = """
                 </style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
+st.markdown(
+    """
+    <style>
+        @media (max-width: 600px) {
+            .st-emotion-cache-1n76uvr {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .st-emotion-cache-1n76uvr {
+                width: 100%;
+                height: 400px;
+            }
+        }
+        /* 다른 크기에 대한 설정 추가 가능 */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 try:
     users = fetch_users()
