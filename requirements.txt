@@ -9,9 +9,9 @@ click
 colorama
 decorator
 deta
-streamlit
 extra-streamlit-components
 gitdb
+GitPython1
 idna
 importlib-metadata
 Jinja2
@@ -38,6 +38,7 @@ requests
 rich
 six
 smmap
+streamlit
 streamlit-authenticator
 tenacity
 toml
