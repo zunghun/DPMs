@@ -27,6 +27,7 @@ def custom_css():
 st.set_page_config(page_title='질병 예측 마이크로맵', page_icon='🐉', initial_sidebar_state='expanded')
 st.markdown("<h1 style='text-align: center; color: pink;'>질병 예측 마이크로맵</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: pink;'>(Disease Prediction Micromaps)</h2>", unsafe_allow_html=True)
+custom_css()
 # st.title("질병 예측 마이크로맵")
 # st.header("(Disease Prediction Micromaps)")
 hide_st_style = """
@@ -46,26 +47,8 @@ hide_st_style = """
                 </style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
-st.markdown(
-    """
-    <style>
-        @media (max-width: 600px) {
-            .st-emotion-cache-1n76uvr {
-                width: 100%;
-                height: 300px;
-            }
-        }
-        @media (min-width: 601px) and (max-width: 1024px) {
-            .st-emotion-cache-1n76uvr {
-                width: 100%;
-                height: 400px;
-            }
-        }
-        /* 다른 크기에 대한 설정 추가 가능 */
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
+
 
 try:
     users = fetch_users()
