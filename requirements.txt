@@ -37,7 +37,6 @@ requests
 rich
 six
 smmap
-streamlit
 streamlit-authenticator
 tenacity
 toml
