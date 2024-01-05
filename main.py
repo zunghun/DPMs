@@ -17,6 +17,13 @@ hide_st_style = """
                 header {visibility: hidden;}
                 
                 #GithubIcon {visibility: hidden;}
+                
+                body {
+                    background-color: #1e1e1e;  /* 어두운 테마 배경색 */
+                }
+                .css-18csuy0 {
+                    color: #10b6fb !important;  /* 주요 색상 설정 */
+                }
                 </style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
