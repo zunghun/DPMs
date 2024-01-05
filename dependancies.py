@@ -6,7 +6,7 @@ import re
 from deta import Deta
 from dotenv import load_dotenv
 
-load_dotenv(".env")
+# load_dotenv(".env")
 # DETA_KEY = os.getenv("DETA_KEY")
 DETA_KEY = 'c0BhxUXtVCm_cxyhUVYPtmQCesY4u7hU1ym89dpzH7gJ'
 
