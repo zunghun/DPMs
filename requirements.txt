@@ -11,7 +11,6 @@ decorator
 deta
 extra-streamlit-components
 gitdb
-GitPython1
 idna
 importlib-metadata
 Jinja2
