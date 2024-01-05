@@ -10,6 +10,17 @@ st.markdown("<h1 style='text-align: center; color: pink;'>질병 예측 마이�
 st.markdown("<h2 style='text-align: center; color: pink;'>(Disease Prediction Micromaps)</h2>", unsafe_allow_html=True)
 # st.title("질병 예측 마이크로맵")
 # st.header("(Disease Prediction Micromaps)")
+hide_st_style = """
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                
+                #GithubIcon {
+                visibility: hidden;
+                </style>
+                """
+                st.markdown(hide_st_style, unsafe_allow_html=True) 
 
 try:
     users = fetch_users()
@@ -43,17 +54,7 @@ try:
                 # sido_list 정의 부분에서 unique()를 제거하고, 전역 변수로 선언
                 sido_list = ["서울특별시", "부산광역시", "대구광역시", "인천광역시", "광주광역시", "대전광역시", "울산광역시", "세종특별자치시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주특별자치도"]
                 disease_list = ["조현병","불면증",]  # 질병 목록 추가
-                hide_st_style = """
-                <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
                 
-                #GithubIcon {
-                visibility: hidden;
-                </style>
-                """
-                st.markdown(hide_st_style, unsafe_allow_html=True) 
                   
                 st.markdown(
                     """
