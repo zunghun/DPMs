@@ -5,6 +5,25 @@ import pandas as pd
 import geopandas as gpd
 import plotly.express as px
 
+def custom_css():
+    css = """
+        <style>
+            @media (max-width: 600px) {
+                .st-emotion-cache-1n76uvr {
+                    width: 100% !important;
+                    height: 300px !important;
+                }
+            }
+            @media (min-width: 601px) and (max-width: 1024px) {
+                .st-emotion-cache-1n76uvr {
+                    width: 100% !important;
+                    height: 400px !important;
+                }
+            }
+        </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
 st.set_page_config(page_title='질병 예측 마이크로맵', page_icon='🐉', initial_sidebar_state='expanded')
 st.markdown("<h1 style='text-align: center; color: pink;'>질병 예측 마이크로맵</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: pink;'>(Disease Prediction Micromaps)</h2>", unsafe_allow_html=True)
