@@ -131,7 +131,7 @@ def sign_up():
 
 # sign_uo()
 
-    st.markdown("<h4 style='text-align: center; color: white;'>ⓒ 2023 Eden All<span style='color: lightgreen;'>Live</span> HEALTHCARE R&D. All rights reserved.</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color: black;'>ⓒ 2023 Eden All<span style='color: lightgreen;'>Live</span> HEALTHCARE R&D. All rights reserved.</h4>", unsafe_allow_html=True)
 
 # st.title("질병 예측 마이크로맵")
 
