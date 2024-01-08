@@ -5,8 +5,35 @@ import pandas as pd
 import geopandas as gpd
 import plotly.express as px
 
+def custom_css():
+    css = """
+        <style>
+            @media (max-width: 600px) {
+                .st-emotion-cache-1n76uvr {
+                    width: 100% !important;
+                    height: 300px !important;
+                }
+            }
+            @media (min-width: 601px) and (max-width: 1024px) {
+                .st-emotion-cache-1n76uvr {
+                    width: 100% !important;
+                    height: 400px !important;
+                }
+            }
+             body {
+                    background-color: #1e1e1e;  /* 어두운 테마 배경색 */
+                }
+                .css-18csuy0 {
+                    color: #10b6fb !important;  /* 주요 색상 설정 */
+                }
+        </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
 
 st.set_page_config(page_title='질병 예측 마이크로맵', page_icon='🐉', initial_sidebar_state='expanded')
+custom_css()
+
 st.markdown("<h1 style='text-align: center; color: pink;'>질병 예측 마이크로맵</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: pink;'>(Disease Prediction Micromaps)</h2>", unsafe_allow_html=True)
 
@@ -20,7 +47,7 @@ hide_st_style = """
                 
                 #GithubIcon {visibility: hidden;}
                 
-            
+               
                 </style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
@@ -57,8 +84,8 @@ try:
             if authentication_status:
                 # 이 부분에 질병지도와 관련된 코드를 넣으세요.
                 # sido_list 정의 부분에서 unique()를 제거하고, 전역 변수로 선언
-                sido_list = ["서울특별시","기타 시도 추후 연결예정"]
-                disease_list = ["조현병","불면증","질병 추가 작업 중"]  # 질병 목록 추가
+                sido_list = ["서울특별시", "부산광역시", "대구광역시", "인천광역시", "광주광역시", "대전광역시", "울산광역시", "세종특별자치시", "경기도", "강원도", "충청북도", "충청남도", "전라북도", "전라남도", "경상북도", "경상남도", "제주특별자치도"]
+                disease_list = ["조현병","불면증",]  # 질병 목록 추가
                 
                   
                 st.markdown(
@@ -375,8 +402,8 @@ try:
 
                         local_css("style/style.css")
                         
-                if __name__ == "__main__":
-                    main()
+            if __name__ == "__main__":
+                main()
 
             elif not authentication_status:
                 with info:
