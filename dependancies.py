@@ -2,6 +2,7 @@ import os
 import streamlit as st
 import streamlit_authenticator as stauth
 import datetime
+import time
 import re
 from deta import Deta
 from dotenv import load_dotenv
@@ -106,8 +107,10 @@ def sign_up():
                                         # Add User to DB
                                         hashed_password = stauth.Hasher([password2]).generate()
                                         insert_user(email, username, hashed_password[0])
-                                        st.success('Account created successfully!!')
-                                        st.balloons()
+                                        with st.spinner('Wait for it...'):
+                                            time.sleep(3)
+                                            st.success('Account created successfully!!')
+                                        # st.balloons()
                                     else:
                                         st.warning('Passwords Do Not Match')
                                 else:
