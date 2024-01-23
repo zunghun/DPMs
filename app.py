@@ -35,6 +35,7 @@ def custom_css():
 
 
 st.set_page_config(page_title='질병 예측 마이크로맵', page_icon='random', initial_sidebar_state='expanded')
+st.markdown("<style>body { background-color: black; color: white; }</style>", unsafe_allow_html=True)
 custom_css()
 
 st.markdown("<h1 style='text-align: center; color: pink;'>질병 예측 마이크로맵</h1>", unsafe_allow_html=True)
