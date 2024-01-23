@@ -418,6 +418,7 @@ import plotly.express as px
 # except Exception as e:
 #     st.error(f'오류가 발생했습니다: {e}')
 #     st.success('페이지를 새로고침해주세요.')
+
 def custom_css():
     css = """
         <style>
@@ -816,8 +817,8 @@ try:
 
                         local_css("style/style.css")
                         
-            if __name__ == "__main__":
-                main()
+                if __name__ == "__main__":
+                    main()
 
             elif not authentication_status:
                 with info:
