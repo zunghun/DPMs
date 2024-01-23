@@ -72,9 +72,9 @@ try:
     for index in range(len(emails)):
         credentials['usernames'][usernames[index]] = {'name': emails[index], 'password': passwords[index]}
 
-        Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit', key='abcdef', cookie_expiry_days=4)
-       
-        email, authentication_status, username = Authenticator.login(':green[Login]', 'main')
+    Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit', key='abcdef', cookie_expiry_days=4)
+   
+    email, authentication_status, username = Authenticator.login(':green[Login]', 'main')
     
     
     info, info1 = st.columns(2)
